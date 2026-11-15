@@ -1,0 +1,1 @@
+Drop logo.png, logo.svg, brochure.pdf (names must match data/college.json) in this folder.
