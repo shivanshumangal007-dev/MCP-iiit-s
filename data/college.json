@@ -1,33 +1,80 @@
 {
-  "name": "Indian Institute of Information Technology, Sonepat",
-  "short_name": "IIIT Sonepat",
-  "established": 2014,
-  "status": "Institution of National Importance, declared by an Act of Parliament",
-  "model": "Public-Private Partnership (PPP)",
-  "established_by": "Ministry of Education (MoE), Government of India, with the Government of Haryana and industry partners HSIIDC and HARTRON",
-  "partners": [
-    {"short": "HSIIDC", "name": "Haryana State Industrial and Infrastructure Development Corporation"},
-    {"short": "HARTRON", "name": "Haryana State Electronics Development Corporation Limited"}
-  ],
-  "mentor_institute": "National Institute of Technology (NIT) Kurukshetra",
-  "about": [
-    "IIIT Sonepat is a rapidly emerging center of excellence in Information Technology and Allied Disciplines. Established under the Public-Private Partnership (PPP) model, it has been declared an Institute of National Importance by an Act of Parliament. The institute is committed to nurturing talent and fostering innovation in the digital era.",
-    "The institute was established in 2014 by the Ministry of Education (MoE), Government of India, in collaboration with the Government of Haryana and industry partners HSIIDC and HARTRON, and was mentored by NIT Kurukshetra. It is envisioned as a hub of academic excellence and research in Information Technology, focused on industry-ready graduates and cutting-edge research."
-  ],
-  "director": {"name": "Prof. (Dr.) Manisha Sharma", "title": "Director, IIIT Sonepat"},
-  "contact": {
-    "address": "IIT Delhi Techno Park, Rajiv Gandhi Education City, Rai, Sonepat, Haryana-131001, India",
-    "phone": ["01302-987910", "7496966902"],
-    "email": "info@iiitsonepat.ac.in"
-  },
-  "social": {"facebook": "", "twitter": "", "instagram": "", "linkedin": "", "youtube": ""},
-  "official_website": "https://iiitsonepat.ac.in/",
-  "official_website_sections": ["Alumni", "Student Forms", "Notices", "Fee Submission", "Timetables", "Examinations", "List of Holidays", "Convocation", "Tenders", "Store & Procurement Form", "Anti ragging", "DASA", "NAD"],
-  "data_source": "https://iiitsonepat.ac.in/",
-  "last_updated": "2026-11-15",
-  "files": [
-    {"id": "logo-png", "title": "IIIT Sonepat logo (PNG)", "category": "logo", "filename": "logo.png", "description": "Official institute emblem, PNG"},
-    {"id": "logo-svg", "title": "IIIT Sonepat logo (SVG)", "category": "logo", "filename": "logo.svg", "description": "Official institute emblem, SVG"},
-    {"id": "brochure", "title": "Institute brochure", "category": "document", "filename": "brochure.pdf", "description": "Institute brochure (PDF)"}
-  ]
+	"name": "Indian Institute of Information Technology, Sonepat",
+	"short_name": "IIIT Sonepat",
+	"established": 2014,
+	"status": "Institution of National Importance, declared by an Act of Parliament",
+	"model": "Public-Private Partnership (PPP)",
+	"established_by": "Ministry of Education (MoE), Government of India, with the Government of Haryana and industry partners HSIIDC and HARTRON",
+	"partners": [
+		{
+			"short": "HSIIDC",
+			"name": "Haryana State Industrial and Infrastructure Development Corporation"
+		},
+		{
+			"short": "HARTRON",
+			"name": "Haryana State Electronics Development Corporation Limited"
+		}
+	],
+	"mentor_institute": "National Institute of Technology (NIT) Kurukshetra",
+	"about": [
+		"IIIT Sonepat is a rapidly emerging center of excellence in Information Technology and Allied Disciplines. Established under the Public-Private Partnership (PPP) model, it has been declared an Institute of National Importance by an Act of Parliament. The institute is committed to nurturing talent and fostering innovation in the digital era.",
+		"The institute was established in 2014 by the Ministry of Education (MoE), Government of India, in collaboration with the Government of Haryana and industry partners HSIIDC and HARTRON, and was mentored by NIT Kurukshetra. It is envisioned as a hub of academic excellence and research in Information Technology, focused on industry-ready graduates and cutting-edge research."
+	],
+	"director": {
+		"name": "Prof. (Dr.) Manisha Sharma",
+		"title": "Director, IIIT Sonepat"
+	},
+	"contact": {
+		"address": "IIT Delhi Techno Park, Rajiv Gandhi Education City, Rai, Sonepat, Haryana-131001, India",
+		"phone": ["01302-987910", "7496966902"],
+		"email": "info@iiitsonepat.ac.in"
+	},
+	"social": {
+		"facebook": "https://www.facebook.com/sonepatiiit/",
+		"twitter": "https://x.com/iiit_sonepat",
+		"instagram": "https://www.instagram.com/sonepat_iiit/",
+		"linkedin": "https://www.linkedin.com/school/indian-institute-of-information-technology-iiit-sonepat/posts/?feedView=all",
+		"youtube": "https://www.youtube.com/@IIITSonepatOfficial"
+	},
+	"official_website": "https://iiitsonepat.ac.in/",
+	"official_website_sections": [
+		"Alumni",
+		"Student Forms",
+		"Notices",
+		"Fee Submission",
+		"Timetables",
+		"Examinations",
+		"List of Holidays",
+		"Convocation",
+		"Tenders",
+		"Store & Procurement Form",
+		"Anti ragging",
+		"DASA",
+		"NAD"
+	],
+	"data_source": "https://iiitsonepat.ac.in/",
+	"last_updated": "2026-11-15",
+	"files": [
+		{
+			"id": "logo-png",
+			"title": "IIIT Sonepat logo (PNG)",
+			"category": "logo",
+			"filename": "logo.png",
+			"description": "Official institute emblem, PNG"
+		},
+		{
+			"id": "logo-svg",
+			"title": "IIIT Sonepat logo (SVG)",
+			"category": "logo",
+			"filename": "logo.svg",
+			"description": "Official institute emblem, SVG"
+		},
+		{
+			"id": "brochure",
+			"title": "Institute brochure",
+			"category": "document",
+			"filename": "brochure.pdf",
+			"description": "Institute brochure (PDF)"
+		}
+	]
 }
