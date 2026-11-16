@@ -2,5 +2,10 @@
   "version": 2,
   "routes": [
     { "src": "/(.*)", "dest": "/api/mcp.py" }
-  ]
+  ],
+  "functions": {
+    "api/mcp.py": {
+      "includeFiles": "{about_us.py,data/**,files/**,site/**}"
+    }
+  }
 }

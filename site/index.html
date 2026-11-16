@@ -9,9 +9,10 @@
 *{box-sizing:border-box}
 body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}
 main,footer .in{max-width:860px;margin:0 auto;padding:0 20px}
-h1,h2{font-family:"Iowan Old Style",Georgia,serif;line-height:1.2}
+h1,h2,h3{font-family:"Iowan Old Style",Georgia,serif;line-height:1.2}
 h1{font-size:clamp(1.9rem,5vw,2.8rem);margin:0 0 .4rem}
 h2{font-size:1.4rem;margin:0 0 .6rem}
+h3{font-size:1.15rem;margin:1rem 0 .3rem;color:var(--ink)}
 section{padding:28px 0;border-top:1px solid var(--line)}
 header{padding:44px 0 28px;display:flex;gap:20px;align-items:center}
 #logo{width:84px;height:84px;object-fit:contain;background:#fff;border:1px solid var(--line);padding:6px;display:none}
@@ -30,6 +31,7 @@ footer{background:var(--ink);color:#cbd2e0;padding:28px 0;margin-top:20px;font-s
 footer a{color:#fff}
 .social{display:flex;gap:14px;flex-wrap:wrap;margin:0 0 12px}
 .social span{opacity:.45}
+.badge{display:inline-block;background:#e5e9f2;color:#334155;padding:2px 8px;border-radius:4px;font-size:.8rem;font-weight:600;margin-right:6px}
 </style>
 </head>
 <body>
@@ -49,7 +51,10 @@ footer a{color:#fff}
   </section>
 
   <section id="about"><h2>About</h2><div id="aboutText"></div></section>
-  <section id="director"><h2>Director</h2><p id="dir"></p></section>
+  <section id="vision"><h2>Vision & Mission</h2><div id="visionBox"></div></section>
+  <section id="courses"><h2>Academic Programs</h2><ul id="courseList"></ul></section>
+  <section id="mous"><h2>MoUs & Collaborations</h2><ul id="mouList"></ul></section>
+  <section id="director"><h2>Director</h2><div id="dirBox"></div></section>
   <section id="files"><h2>Files</h2><ul id="fileList"></ul></section>
   <section id="contact"><h2>Contact</h2><div id="contactBox"></div></section>
 </main>
@@ -65,14 +70,61 @@ fetch('/api/info').then(r=>r.json()).then(d=>{
   $('#url').textContent=d.mcp_url;
   $('#cfg').textContent=JSON.stringify({mcpServers:{'iiit-sonepat':{url:d.mcp_url}}},null,2);
   $('#copy').onclick=()=>navigator.clipboard.writeText(d.mcp_url).then(()=>{$('#copy').textContent='Copied'});
+  
+  // Tools
   d.tools.forEach(t=>{const li=add($('#tools'),'li');add(li,'strong',{},t.name);add(li,'span',{className:'muted'},' – '+t.description.split('\n')[0])});
+  
+  // About
   d.about.forEach(p=>add($('#aboutText'),'p',{},p));
-  $('#dir').textContent=d.director.name+', '+d.director.title;
+  
+  // Vision & Mission
+  if(d.vision&&d.vision.length){
+    const vb=$('#visionBox');
+    add(vb,'h3',{},'Vision');
+    d.vision.forEach(v=>add(vb,'p',{},v));
+    add(vb,'h3',{},'Mission');
+    const mul=add(vb,'ul');
+    d.mission.forEach(m=>add(mul,'li',{},m));
+  }
+  
+  // Academic Programs
+  if(d.courses&&d.courses.length){
+    const cl=$('#courseList');
+    d.courses.forEach(c=>{
+      const li=add(cl,'li');
+      add(li,'span',{className:'badge'},c.degree);
+      add(li,'strong',{},c.title);
+      add(li,'div',{className:'muted'},c.description);
+    });
+  }
+
+  // MoUs
+  if(d.mous&&d.mous.length){
+    const ml=$('#mouList');
+    d.mous.forEach(m=>{
+      const li=add(ml,'li');
+      add(li,'strong',{},m.partner_institution+' – '+m.full_partner_name);
+      if(m.signed_date) add(li,'div',{className:'muted'},'Signed: '+m.signed_date);
+      add(li,'div',{className:'muted'},m.description);
+    });
+  }
+
+  // Director
+  const db=$('#dirBox');
+  const dinfo=d.director_full||d.director;
+  add(db,'p',{},dinfo.name+(dinfo.designation?' ('+dinfo.designation+')':''));
+  if(dinfo.qualification) add(db,'p',{className:'muted'},'Qualification: '+dinfo.qualification);
+  if(dinfo.email) add(db,'p',{className:'muted'},'Email: '+dinfo.email);
+  if(dinfo.about) add(db,'p',{},dinfo.about);
+
+  // Files
   d.files.forEach(f=>{const li=add($('#fileList'),'li');add(li,'strong',{},f.title+' ');
     if(f.available){add(li,'a',{href:f.download_url},'Download')}else{add(li,'span',{className:'muted'},'Not uploaded yet')}
     add(li,'div',{className:'muted'},f.description)});
   const logo=d.files.find(f=>f.category==='logo'&&f.available);
   if(logo){$('#logo').src=logo.download_url;$('#logo').style.display='block'}
+  
+  // Contact
   const c=d.contact,b=$('#contactBox');
   add(b,'p',{},c.address);
   const ph=add(b,'p',{},'Phone: ');c.phone.forEach((n,i)=>{if(i)ph.append(', ');add(ph,'a',{href:'tel:'+n.replace(/\s/g,'')},n)});

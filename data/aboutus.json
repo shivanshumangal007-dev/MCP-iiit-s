@@ -1,0 +1,725 @@
+{
+  "section_slug": "about-us",
+  "section_title": "About Us",
+  "pages": [
+    {
+      "page_metadata": {
+        "url": "https://www.iiitsonepat.ac.in/about/about",
+        "slug": "about",
+        "title": "About IIIT Sonepat",
+        "subtitle": "Know more about our institution"
+      },
+      "institution_info": {
+        "name": "Indian Institute of Information Technology, Sonepat",
+        "short_name": "IIIT Sonepat",
+        "status": "An Institute of National Importance",
+        "established_year": 2014,
+        "model": "Public-Private Partnership (PPP)",
+        "mentored_by": "National Institute of Technology (NIT) Kurukshetra",
+        "established_by": "Ministry of Education (MoE), Government of India",
+        "partners": [
+          "Government of Haryana",
+          "Haryana State Industrial and Infrastructure Development Corporation (HSIIDC)",
+          "Haryana State Electronics Development Corporation Limited (HARTRON)"
+        ],
+        "overview": [
+          "Welcome to IIIT Sonepat — a rapidly emerging center of excellence in Information Technology and Allied Disciplines. Established under the Public-Private Partnership (PPP) model, IIIT Sonepat has been declared an Institute of National Importance by an Act of Parliament. The institute is committed to nurturing talent and fostering innovation in the digital era.",
+          "Indian Institute of Information Technology Sonepat (IIIT Sonepat) was established in 2014 by the Ministry of Education (MoE), Government of India, in collaboration with the Government of Haryana and industry partners: Haryana State Industrial and Infrastructure Development Corporation (HSIIDC) and the Haryana State Electronics Development Corporation Limited (HARTRON). The Institute was mentored by the National Institute of Technology (NIT) Kurukshetra, one of India’s premier technical institutions. IIIT Sonepat is envisioned as a hub of academic excellence and research in Information Technology, with a focus on producing industry-ready graduates and contributing to cutting-edge research in leading areas."
+        ]
+      },
+      "courses_offered": [
+        {
+          "degree": "B.Tech",
+          "branch": "Computer Science and Engineering",
+          "title": "B.Tech (Computer Science and Engineering)",
+          "description": "A comprehensive undergraduate program covering fundamental and advanced topics in computer science and engineering."
+        },
+        {
+          "degree": "B.Tech",
+          "branch": "Information Technology",
+          "title": "B.Tech (Information Technology)",
+          "description": "A comprehensive undergraduate program covering fundamental and advanced topics in Information Technology."
+        },
+        {
+          "degree": "B.Tech",
+          "branch": "CSE (Data Science and Analytics)",
+          "title": "B.Tech CSE (Data Science and Analytics)",
+          "description": "B.Tech in Data Science and Analytics trains students in data handling, AI, and machine learning using tools like Python and SQL. The program prepares graduates for roles in data science, analytics, and emerging tech industries."
+        },
+        {
+          "degree": "B.Tech",
+          "branch": "CSE (Artificial Intelligence)",
+          "title": "B.Tech CSE (Artificial Intelligence)",
+          "description": "A comprehensive undergraduate program covering fundamental and advanced topics in Artificial Intelligence"
+        }
+      ],
+      "memorandum_of_understandings": [
+        {
+          "partner_institution": "NIT, Surat",
+          "full_partner_name": "Sardar Vallabhbhai National Institute of Technology, Surat",
+          "signed_date": "2026-04-20",
+          "signatories": [],
+          "witnesses": [],
+          "description": "Indian Institute of Information Technology(IIIT), Sonepat is glad to announce the signing of a Memorandum of Understanding (MoU) with Sardar Vallabhbhai National Institute of Technology, Surat on 20 April 2026. This strategic partnership marks a significant step toward fostering Academic Excellence and advancing Innovative research. The collaboration aims to strengthen academic and research ties through joint research initiatives, faculty and student exchange programs, and the organization of academic events, workshops, and knowledge-sharing activities."
+        },
+        {
+          "partner_institution": "IIT, Bhilai",
+          "full_partner_name": "Indian Institute of Technology, Bhilai",
+          "signed_date": "2026-04-21",
+          "signatories": [],
+          "witnesses": [],
+          "description": "Indian Institute of Information Technology(IIIT), Sonepat is pleased to announce the signing of a Memorandum of Understanding (MoU) with the Indian Institute of Technology, Bhilai on 21st April 2026. This collaboration reflects a shared commitment to strengthening academic and research engagement between the two institutions. The partnership will focus on promoting collaborative research in areas of mutual interest, facilitating academic exchange and cooperation, and enabling joint supervision and meaningful interaction between faculty members and students."
+        },
+        {
+          "partner_institution": "MNIT Jaipur",
+          "full_partner_name": "E&ICT Academy, Malaviya National Institute of Technology Jaipur (MNIT)",
+          "signed_date": null,
+          "signatories": [
+            "Prof. Manisha Sharma, Director, IIIT Sonepat",
+            "Prof. Vineet Sahula, Chief Investigator, E&ICT Academy, MNIT Jaipur"
+          ],
+          "witnesses": [
+            "Dr. Mohan Bansal, SMIEEE, Spoke Coordinator, IIIT Sonepat",
+            "Dr. Satyasai Jagannath Nanda, Co-Chief Investigator, E&ICT Academy, MNIT Jaipur"
+          ],
+          "description": "Indian Institute of Information Technology(IIIT), Sonepat and the E& ICT Academy, Malaviya National Institute of Technology Jaipur (MNIT) have signed a MoU to jointly organize Faculty Development Programmes (FDPs) and foster innovation-driven academic collaboration. This strategic partnership aims to strengthen academic excellence and promote research in emerging areas, through collaborative FDPs, interdisciplinary knowledge-sharing, and institutional synergy."
+        },
+        {
+          "partner_institution": "IIT Hyderabad",
+          "full_partner_name": "Indian Institute of Technology Hyderabad",
+          "signed_date": null,
+          "signatories": [],
+          "witnesses": [],
+          "description": "IIIT Sonepat has signed an MoU with IIT Hyderabad to promote academic and research collaborations between the institutions. Under this partnership, students from IIIT Sonepat can participate in joint research projects, exchange programs, and academic seminars with IIT Hyderabad. Faculty members from both institutions can collaborate on research projects, publish joint papers, and engage in joint supervision of research scholars. The MoU also includes joint workshops, training programs, and other academic initiatives to enhance the academic and research capabilities of the institutions."
+        },
+        {
+          "partner_institution": "NIT Delhi",
+          "full_partner_name": "National Institute of Technology, Delhi",
+          "signed_date": null,
+          "signatories": [
+            "Prof. (Dr.) Manisha Sharma, Director, Indian Institute of Information Technology, Sonepat",
+            "Prof. (Dr.) Ajay K Sharma, Director, National Institute of Technology Delhi"
+          ],
+          "witnesses": [],
+          "description": "IIIT Sonepat has signed an MoU with National Institute of Technology, Delhi. Prof. (Dr.) Manisha Sharma, Director, Indian Institute of Information Technology, Sonepat and Prof. (Dr.) Ajay K Sharma, Director, National Institute of Technology Delhi were present to honor the signing of the Memorandum of Understanding."
+        },
+        {
+          "partner_institution": "NYUS, Taiwan",
+          "full_partner_name": "National Yunlin University of Science and Technology, Taiwan",
+          "signed_date": null,
+          "signatories": [
+            "Prof. Manisha Sharma, Director, Indian Institute of Information Technology, Sonepat",
+            "Prof. Chang, Chuan-Yu, President, National Yunlin University of Science and Technology Taiwan"
+          ],
+          "witnesses": [],
+          "description": "The memorandum of understanding was signed by Prof. Manisha Sharma, Director, Indian Institute of Information Technology, Sonepat and Prof. Chang, Chuan-Yu, President, National Yunlin University of Science and Technology Taiwan. This collaboration will enable IIIT Sonepat (Haryana, India) and National Yunlin University of Science and Technology (Yunlin,Taiwan) to support each other's endeavors in delivery of Research activities, Academic programs, Student Exchange Program, Faculty Exchange Program, Special Short-term, Staff Development Projects."
+        },
+        {
+          "partner_institution": "DTU, Delhi",
+          "full_partner_name": "Delhi Technological University",
+          "signed_date": null,
+          "signatories": [],
+          "witnesses": [],
+          "description": "IIIT Sonepat has signed an MoU with DTU to foster collaborations in various fields such as computer science, engineering, and technology. This partnership provides opportunities for joint research projects, exchange programs, and academic visits. Faculty members from both institutions can collaborate on research projects, share their expertise, and engage in joint supervision of research scholars. The MoU also includes joint workshops, seminars, and other academic initiatives to enhance the academic and research capabilities of the institutions. Overall, this MoU aims to promote academic excellence, research innovation, and cultural exchange between IIIT Sonepat and DTU."
+        }
+      ],
+      "contact_and_footer": {
+        "address": "Indian Institute of Information Technology, Sonepat, IIT Delhi Techno Park, Rajiv Gandhi Education City, Rai, Sonepat, Haryana-131001, India",
+        "phones": [
+          "01302-987910",
+          "7496966902"
+        ],
+        "email": "info@iiitsonepat.ac.in"
+      }
+    },
+    {
+      "page_metadata": {
+        "url": "https://www.iiitsonepat.ac.in/about/board-of-governors",
+        "slug": "board-of-governors",
+        "title": "Board of Governors"
+      },
+      "members": [
+        {
+          "s_no": 1,
+          "name": "Mrs. Kavita Khanna",
+          "role_or_title": "Chairperson BoG",
+          "organization": "IIIT Sonepat",
+          "member_designation": "Chairperson"
+        },
+        {
+          "s_no": 2,
+          "name": "Ms. Saumya Gupta",
+          "role_or_title": "Joint Secretary",
+          "organization": "Technical Education, Ministry of Education, New Delhi",
+          "member_designation": "Member"
+        },
+        {
+          "s_no": 3,
+          "name": "Administrative Secretary to Government of Haryana",
+          "role_or_title": "Administrative Secretary",
+          "organization": "Dept. of Technical Education, Haryana",
+          "member_designation": "Member"
+        },
+        {
+          "s_no": 4,
+          "name": "Prof. Manisha Sharma",
+          "role_or_title": "Director",
+          "organization": "IIIT Sonepat",
+          "member_designation": "Member"
+        },
+        {
+          "s_no": 5,
+          "name": "Shri. Naveen Chaudhary",
+          "role_or_title": "Project Manager",
+          "organization": "HMSDC, Gurugram",
+          "member_designation": "Member"
+        },
+        {
+          "s_no": 6,
+          "name": "Shri. Sanjay Garg",
+          "role_or_title": "Additional General Manager, Head of IT Division",
+          "organization": "HSIIDC Panchkula",
+          "member_designation": "Member"
+        },
+        {
+          "s_no": 7,
+          "name": "Prof. (Dr.) Anupam Shukla",
+          "role_or_title": "Director",
+          "organization": "SVNIT Surat, Gujarat, India",
+          "member_designation": "Member"
+        },
+        {
+          "s_no": 8,
+          "name": "Prof. Suvarn S. Kulkarni",
+          "role_or_title": "Professor",
+          "organization": "IIT Bombay",
+          "member_designation": "Member"
+        },
+        {
+          "s_no": 9,
+          "name": "Prof. Y. N. Reddy",
+          "role_or_title": "Former Professor (HAG)",
+          "organization": "NIT Warangal",
+          "member_designation": "Member"
+        },
+        {
+          "s_no": 10,
+          "name": "Prof. Mithilesh Atulkar",
+          "role_or_title": "Professor",
+          "organization": "NIT Raipur",
+          "member_designation": "Member"
+        },
+        {
+          "s_no": 11,
+          "name": "Mr. Shashikant Sharma",
+          "role_or_title": "Resident Expert, IN-SPACE",
+          "organization": "Space Applications Centre (SAC), ISRO",
+          "member_designation": "Member"
+        },
+        {
+          "s_no": 12,
+          "name": "Shri Amit Sen",
+          "role_or_title": "Former President Finance, Essar Group, and Former Director (Finance)",
+          "organization": "Steel Authority of India Ltd. (SAIL)",
+          "member_designation": "Member"
+        },
+        {
+          "s_no": 13,
+          "name": "Dr. Divya Rajput",
+          "role_or_title": "Innovation Evangelist & Angel Investor",
+          "organization": "LP-Sonicorn Ventures",
+          "member_designation": "Member"
+        }
+      ]
+    },
+    {
+      "page_metadata": {
+        "url": "https://www.iiitsonepat.ac.in/about/vision-and-mission",
+        "slug": "vision-and-mission",
+        "title": "Vision & Mission",
+        "subtitle": "Our guiding principles and aspirations"
+      },
+      "vision": [
+        "To contribute to society through excellence in scientific and technical education and research",
+        "To serve as a valuable resource for industry and society"
+      ],
+      "mission": [
+        "To generate new knowledge by engaging in cutting-edge research and to promote academic growth by offering state-of-the-art undergraduate, postgraduate and doctoral programmes",
+        "To identify, based on an informed perception of Indian, regional, and global needs, areas of specialization upon which the Institute can concentrate",
+        "To undertake collaborative projects which offer opportunities for long-term interaction with academia and industry",
+        "To develop human potential to its fullest extent so that intellectually capable and imaginatively gifted leaders can emerge in a range of professions."
+      ]
+    },
+    {
+      "page_metadata": {
+        "url": "https://www.iiitsonepat.ac.in/about/annual-reports",
+        "slug": "annual-reports",
+        "title": "Annual Reports",
+        "subtitle": "Yearly progress and achievements"
+      },
+      "about_annual_reports": "Annual Reports highlight IIIT Sonepat's progress in academics, research, and institutional development.",
+      "reports": [
+        {
+          "s_no": 1,
+          "report_name": "Annual Report 2025-26",
+          "academic_year": "2025-26",
+          "release_date": "September 11, 2026",
+          "release_date_iso": "2026-09-11",
+          "has_download": true
+        },
+        {
+          "s_no": 2,
+          "report_name": "Annual Report 2024-25",
+          "academic_year": "2024-25",
+          "release_date": "June 23, 2026",
+          "release_date_iso": "2026-06-23",
+          "has_download": true
+        },
+        {
+          "s_no": 3,
+          "report_name": "Annual Report 2023-24",
+          "academic_year": "2023-24",
+          "release_date": "July 1, 2024",
+          "release_date_iso": "2024-07-01",
+          "has_download": true
+        },
+        {
+          "s_no": 4,
+          "report_name": "Annual Report 2021-22",
+          "academic_year": "2021-22",
+          "release_date": "February 5, 2022",
+          "release_date_iso": "2022-02-05",
+          "has_download": true
+        },
+        {
+          "s_no": 5,
+          "report_name": "Annual Report 2022-23",
+          "academic_year": "2022-23",
+          "release_date": "April 7, 2023",
+          "release_date_iso": "2023-04-07",
+          "has_download": true
+        }
+      ]
+    },
+    {
+      "page_metadata": {
+        "url": "https://www.iiitsonepat.ac.in/about/act-statutes",
+        "slug": "act-statutes",
+        "title": "Act, Statutes & Ordinances"
+      },
+      "available_categories": [
+        "All Categories",
+        "Acts",
+        "Statutes",
+        "Ordinances"
+      ],
+      "documents": [
+        {
+          "ref_no": "IIITS-232/43",
+          "title": "Sexual Harrassment of Women Act and Rules 2013",
+          "release_date": "April 17, 2025",
+          "release_date_iso": "2025-04-17",
+          "has_download": true
+        },
+        {
+          "ref_no": "IIITS-3232/43",
+          "title": "IIIT(PPP) Act, 2017",
+          "release_date": "March 26, 2025",
+          "release_date_iso": "2025-03-26",
+          "has_download": true
+        },
+        {
+          "ref_no": "F.No.51-2/2016-TS.1",
+          "title": "RPN 2016",
+          "release_date": "September 16, 2016",
+          "release_date_iso": "2016-09-16",
+          "has_download": true
+        },
+        {
+          "ref_no": "F.No.27-11/2011-TS.I",
+          "title": "Four-Tier Flexible Faculty Structure",
+          "release_date": "April 23, 2014",
+          "release_date_iso": "2014-04-23",
+          "has_download": true
+        }
+      ]
+    },
+    {
+      "page_metadata": {
+        "url": "https://www.iiitsonepat.ac.in/about/right-to-information",
+        "slug": "right-to-information",
+        "title": "Right to Information",
+        "subtitle": "Transparency and accountability"
+      },
+      "about_rti": "Right to Information (RTI) is an Act of the Indian Parliament enforced from the year 2005, to provide for a practical regime for citizens to secure access to information under the control of public authorities. This aims to promote transparency and accountability in the working of every public authority. IIIT Sonepat is covered under this act..",
+      "rti_officials": [
+        {
+          "role": "Appellate Authority",
+          "name": "Dr. Diddi Kumara Swamy",
+          "designation": "Assistant Professor in Mathematics",
+          "email": "diddi.swamy@iiitsonepat.ac.in",
+          "raw_email": "diddi[dot]swamy[at]iiitsonepat[dot]ac[dot]in"
+        },
+        {
+          "role": "Public Information Officer (PIO)",
+          "name": "Dr. Mohan Bansal",
+          "designation": "Assistant Professor in ECE",
+          "email": "bmohan@iiitsonepat.ac.in",
+          "raw_email": "bmohan[at]iiitsonepat[dot]ac[dot]in"
+        }
+      ],
+      "documents": [
+        {
+          "s_no": 1,
+          "title": "RTI Audit Mandatory Self Disclosure 2026",
+          "has_download": true
+        },
+        {
+          "s_no": 2,
+          "title": "IIIT Sonepat-Website Security Audit-Certificate",
+          "has_download": true
+        },
+        {
+          "s_no": 3,
+          "title": "Third Party Transparency Audit Report 2024-25",
+          "has_download": true
+        },
+        {
+          "s_no": 4,
+          "title": "RTI Annual Report (Q1-Q4) 2025-26",
+          "has_download": true
+        },
+        {
+          "s_no": 5,
+          "title": "RTI Audit Mandatory Disclosure 2025",
+          "has_download": true
+        },
+        {
+          "s_no": 6,
+          "title": "FAQ's Regarding RTI",
+          "has_download": true
+        },
+        {
+          "s_no": 7,
+          "title": "Quarterly Report RTI-Q3",
+          "has_download": true
+        },
+        {
+          "s_no": 8,
+          "title": "Quarterly Report RTI-Q2",
+          "has_download": true
+        },
+        {
+          "s_no": 9,
+          "title": "Quarterly Report RTI-Q1",
+          "has_download": true
+        },
+        {
+          "s_no": 10,
+          "title": "Mandatory Disclosure as on 31th July 2024",
+          "has_download": true
+        },
+        {
+          "s_no": 11,
+          "title": "Quarterly Report RTI-(Q1-Q4) 2023-24",
+          "has_download": true
+        },
+        {
+          "s_no": 12,
+          "title": "Quarterly Report RTI-(Q1-Q4) 2024-25",
+          "has_download": true
+        },
+        {
+          "s_no": 13,
+          "title": "Audit Report IIIT Sonepat (2023-24)",
+          "has_download": true
+        }
+      ]
+    },
+    {
+      "page_metadata": {
+        "url": "https://www.iiitsonepat.ac.in/reservation-policy",
+        "slug": "reservation-policy",
+        "title": "Reservation Policy"
+      },
+      "covered_categories": [
+        "Scheduled Castes (SC)",
+        "Scheduled Tribes (ST)",
+        "Other Backward Classes – Non-Creamy Layer (OBC-NCL)",
+        "Economically Weaker Sections (EWS)",
+        "Persons with Benchmark Disabilities (PwBD)"
+      ],
+      "policy_statements": [
+        "The Indian Institute of Information Technology (IIIT) Sonepat, an Institute of National Importance established under the Indian Institutes of Information Technology (Public-Private Partnership) Act, 2017, strictly adheres to the reservation policies of the Government of India in respect of admissions to its various academic programmes. IIIT Sonepat implements the reservation policy of the Government of India, as per the applicable norms, in recruitment to teaching and non-teaching positions.",
+        "Reservation is provided to eligible candidates belonging to various categories, including Scheduled Castes (SC), Scheduled Tribes (ST), Other Backward Classes – Non-Creamy Layer (OBC-NCL), Economically Weaker Sections (EWS), and Persons with Benchmark Disabilities (PwBD), in accordance with the applicable rules, notifications, orders, and instructions issued by the Government of India from time to time.",
+        "The Institute maintains reservation rosters and implements reservation in recruitment and admissions in accordance with the applicable Acts, Rules, and instructions issued by the Ministry of Education, Government of India, and other competent authorities from time to time. DoPT guidelines on disclosure of Reservation roster are being complied with by the institute."
+      ]
+    },
+    {
+      "page_metadata": {
+        "url": "https://www.iiitsonepat.ac.in/institute-committee",
+        "slug": "institute-committee",
+        "title": "Institute Committee 2025-26",
+        "academic_year": "2025-26"
+      },
+      "committees": [
+        {
+          "committee_or_role": "Student Counsellor",
+          "faculty_in_charge": "Dr. Syed Ghufran Hashmi",
+          "members": []
+        },
+        {
+          "committee_or_role": "Website In charge and Digital Outreach",
+          "faculty_in_charge": "Dr. Wakar Ahmad",
+          "members": []
+        },
+        {
+          "committee_or_role": "Research & Development cell",
+          "faculty_in_charge": "Dr. Diddi Kumara Swamy",
+          "members": [
+            "Dr. Zamir Ahmad"
+          ]
+        },
+        {
+          "committee_or_role": "International Collaboration",
+          "faculty_in_charge": "Dr. Ramesh Saha",
+          "members": []
+        },
+        {
+          "committee_or_role": "Placement / Alumni Committee",
+          "faculty_in_charge": "Dr. Gaurav Jain",
+          "members": [
+            "Dr. Ramesh Saha"
+          ]
+        },
+        {
+          "committee_or_role": "Purchase Committee",
+          "faculty_in_charge": "Dr. Mohan Bansal",
+          "raw_faculty_in_charge": "Dr. Dr. Mohan Bansal",
+          "members": [
+            "Dr. Mohan Bansal",
+            "Dr. Sourabh Jain",
+            "Dr. Mukesh Maan"
+          ]
+        },
+        {
+          "committee_or_role": "Strategic Initiative & Resource Mobilization",
+          "faculty_in_charge": "Dr. Vinay Pathak",
+          "members": []
+        },
+        {
+          "committee_or_role": "Student Admissions",
+          "faculty_in_charge": "Dr. Chanchal Kumar",
+          "members": []
+        },
+        {
+          "committee_or_role": "Establishment Section and Extension activities",
+          "faculty_in_charge": "Dr. B. S. Bhati",
+          "members": []
+        },
+        {
+          "committee_or_role": "Public Information In charge",
+          "faculty_in_charge": "Dr. Mohan Bansal",
+          "members": []
+        },
+        {
+          "committee_or_role": "Examination Cell",
+          "faculty_in_charge": "Dr. Diddi kumara Swamy",
+          "members": []
+        },
+        {
+          "committee_or_role": "Academics In charge",
+          "faculty_in_charge": "Dr. Vinay Kaushik",
+          "members": []
+        },
+        {
+          "committee_or_role": "Infrastructure In charge",
+          "faculty_in_charge": "Dr. Zamir Ahmad Ansari",
+          "members": []
+        },
+        {
+          "committee_or_role": "Industry Outreach cell",
+          "faculty_in_charge": "Dr. Chanchal",
+          "members": []
+        }
+      ]
+    },
+    {
+      "page_metadata": {
+        "url": "https://www.iiitsonepat.ac.in/about/visitor",
+        "slug": "visitor",
+        "title": "Visitor"
+      },
+      "visitor": {
+        "name": "Smt. Droupadi Murmu",
+        "honorific": "Her Excellency Honorable Smt. Droupadi Murmu",
+        "title": "The President of India",
+        "role": "Ex Officio Visitor of the Institute",
+        "description": "Her Excellency Honorable Smt. Droupadi Murmu, The President of India, is the ex officio visitor of the Institute.",
+        "has_official_website_link": true
+      }
+    },
+    {
+      "page_metadata": {
+        "url": "https://www.iiitsonepat.ac.in/about/directors-desk",
+        "slug": "directors-desk",
+        "title": "Director's Desk"
+      },
+      "director": {
+        "name": "Prof. (Dr.) Manisha Sharma",
+        "designation": "Director, IIIT Sonepat",
+        "qualification": "Ph.D. (Electronics & Telecomm Engineering)",
+        "email": "director@iiitsonepat.ac.in",
+        "raw_email": "director[at]iiitsonepat[dot]ac[dot]in",
+        "about": "Prof. (Dr.) Manisha Sharma is the Director of IIIT Sonepat, leading the Institute with a vision for academic excellence and innovation. She has extensive experience in Electronics and Telecommunications Engineering, with a focus on research, teaching, and administration. Under her leadership, the Institute aims to achieve National and International recognition.",
+        "directors_message": "Being the Director of an 'Institution of National Importance' is a matter of pride as well as responsibility. Now, as the baton has passed on to me, I realize that it is for me to lay a roadmap that would take this institution to even greater heights. Having come from a research background and having seen, at close quarters, what meaningful research output can do for the growth and prestige of the country, I am convinced that research has to be a thrust area for our institutions of higher learning. I would strive to provide that thrust in this institution. If we succeed in enthusing our faculty, staff and students towards this end, our institute would become a cradle of creative and innovative ideas that can help develop new technologies, which, in turn, would transform our country. As a young institute, IIIT Sonepat has a unique opportunity to make a difference not only to the Indian IT industry and the academic research community, but also to the people of the entire region of Haryana. With this environment and rapidly improving connectivity to the IT capital New Delhi and the business city Gurugram, IIIT Sonepat is strategically positioned to develop into one of the best institutes of national importance in the country, under able and caring mentorship by NIT-Kurukshetra. In the coming years, with the support of its eminent Chairperson and Governing Body, the Institute will make every effort to construct and move to its spacious permanent campus located in a pristine setting near Sonepat. IIIT Sonepat is keen to push an effective research agenda and enhance its academic offerings by adding postgraduate and research programmes as well as more specialisations of current relevance in undergraduate studies. Postgraduate studies and research will be a key factor for improving our visibility to the world. I also seek support of all stakeholders in steering the institute to a great future. We have lots of work to do on multiple fronts. We have to create quality infrastructure, develop labs for academic and research activities, enhance research potential, and expand the academic programs. We have to achieve all these in the fast-changing education system. Let's all work together to achieve these goals."
+      }
+    },
+    {
+      "page_metadata": {
+        "url": "https://www.iiitsonepat.ac.in/about/senate",
+        "slug": "senate",
+        "title": "Senate"
+      },
+      "members": [
+        {
+          "s_no": 1,
+          "name": "Prof. Manisha Sharma",
+          "role_or_department": "Director",
+          "organization": "IIIT Sonepat",
+          "member_designation": "Chairperson"
+        },
+        {
+          "s_no": 2,
+          "name": "Prof. Vibha Vyas",
+          "role_or_department": "Electronics and Communication",
+          "organization": "COEP, Pune",
+          "member_designation": "Member"
+        },
+        {
+          "s_no": 3,
+          "name": "Prof. R. B. Keskar",
+          "role_or_department": "Computer Science & Engineering",
+          "organization": "VNIT, Nagpur",
+          "member_designation": "Member"
+        },
+        {
+          "s_no": 4,
+          "name": "Prof. Venkanna Udutalapally",
+          "role_or_department": "Computer Science & Engineering",
+          "organization": "NIT, Warangal",
+          "member_designation": "Member"
+        },
+        {
+          "s_no": 5,
+          "name": "Prof. Vijay Laxmi",
+          "role_or_department": "Computer Science and Engineering",
+          "organization": "MNIT Jaipur",
+          "member_designation": "Member"
+        },
+        {
+          "s_no": 6,
+          "name": "Prof. Vikram Goyal",
+          "role_or_department": "Computer Science and Engineering",
+          "organization": "IIIT Delhi",
+          "member_designation": "Member"
+        },
+        {
+          "s_no": 7,
+          "name": "Prof. Mamta Khosla",
+          "role_or_department": "Electronics and Communication Engineering",
+          "organization": "NIT Jalandhar",
+          "member_designation": "Member"
+        }
+      ]
+    },
+    {
+      "page_metadata": {
+        "url": "https://www.iiitsonepat.ac.in/about/finance-committee",
+        "slug": "finance-committee",
+        "title": "Finance Committee"
+      },
+      "members": [
+        {
+          "s_no": 1,
+          "name": "Smt. Kavita Khanna",
+          "role_or_title": "Chairperson, Finance Committee",
+          "organization": "IIIT Sonepat",
+          "member_designation": "Chairperson"
+        },
+        {
+          "s_no": 2,
+          "name": "Shri. Mukesh Kumar",
+          "role_or_title": "Director (IFD)",
+          "organization": "Ministry of Education, Govt. of India",
+          "member_designation": "Member"
+        },
+        {
+          "s_no": 3,
+          "name": "Principal Secretary",
+          "role_or_title": "Technical Education",
+          "organization": "Govt. of Haryana",
+          "member_designation": "Member"
+        },
+        {
+          "s_no": 4,
+          "name": "Shri. Rajat Aggarwal",
+          "role_or_title": "Dy. General Manager (Finance)",
+          "organization": "HSIIDC, Panchkula",
+          "member_designation": "Member"
+        },
+        {
+          "s_no": 5,
+          "name": "Prof. Manisha Sharma",
+          "role_or_title": "Director",
+          "organization": "IIIT Sonepat",
+          "member_designation": "Member"
+        }
+      ]
+    },
+    {
+      "page_metadata": {
+        "url": "https://www.iiitsonepat.ac.in/about/building-works-committee",
+        "slug": "building-works-committee",
+        "title": "Building and Works Committee"
+      },
+      "members": [
+        {
+          "s_no": 1,
+          "name": "Dr. Manisha Sharma",
+          "role_or_title": "Director",
+          "organization": "IIIT Sonepat",
+          "member_designation": "Chairperson"
+        },
+        {
+          "s_no": 2,
+          "name": "Shri Priyank Chaturvedi",
+          "role_or_title": "Deputy Secretary, Dept. of Higher Education",
+          "organization": "Ministry of Education, New Delhi",
+          "member_designation": "Member"
+        },
+        {
+          "s_no": 3,
+          "name": "Sh. Anil Sherawat",
+          "role_or_title": "Additional Director",
+          "organization": "Directorate of Technical Education, Haryana",
+          "member_designation": "Member"
+        },
+        {
+          "s_no": 4,
+          "name": "Sh. Sushant Baliga",
+          "role_or_title": "Retd. Additional Director General",
+          "organization": "Central Public Works Department (CPWD)",
+          "member_designation": "Member"
+        },
+        {
+          "s_no": 5,
+          "name": "Prof. Amit Kumar Shrivastava",
+          "role_or_title": "Dept. of Civil Engineering",
+          "organization": "Delhi Technological University",
+          "member_designation": "Member"
+        }
+      ]
+    }
+  ]
+}
