@@ -12,7 +12,13 @@ C = json.loads((ROOT / "data" / "college.json").read_text(encoding="utf-8"))
 
 
 def base_url() -> str:
-    return (os.getenv("BASE_URL") or os.getenv("RENDER_EXTERNAL_URL") or "http://localhost:8000").rstrip("/")
+    explicit = os.getenv("BASE_URL") or os.getenv("RENDER_EXTERNAL_URL")
+    if explicit:
+        return explicit.rstrip("/")
+    vercel_url = os.getenv("VERCEL_URL")
+    if vercel_url:
+        return f"https://{vercel_url}".rstrip("/")
+    return "http://localhost:8000"
 
 
 mcp = FastMCP(

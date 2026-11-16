@@ -28,6 +28,15 @@ Test with `npx @modelcontextprotocol/inspector` (choose Streamable HTTP, paste t
 
 Free instances sleep when idle, so the first request after a break can be slow.
 
+## Deploy on Vercel (serverless)
+
+1. Push this folder to a GitHub repo.
+2. Vercel dashboard: Add New > Project, import the repo, framework preset "Other".
+   - Build command: `pip install -r requirements.txt`
+   - Output directory: (leave blank / not needed for Python)
+3. After deploy, your MCP URL is `https://<your-project>.vercel.app/mcp`.
+4. Set the env var `BASE_URL` to your custom domain (if you use one) so links are correct.
+
 ## Connect
 - Claude: Settings > Connectors > Add custom connector > paste the /mcp URL.
 - Cursor: add `{"mcpServers": {"iiit-sonepat": {"url": "<your /mcp URL>"}}}`.
