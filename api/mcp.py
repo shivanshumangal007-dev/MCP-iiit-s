@@ -23,4 +23,4 @@ app = CORSMiddleware(
     allow_headers=["*"],
 )
 
-handler = Mangum(app, lifespan="off")
+handler = Mangum(app)
