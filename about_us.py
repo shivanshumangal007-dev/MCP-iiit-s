@@ -1,59 +1,34 @@
 """About Us module for IIIT Sonepat MCP server.
 
 Parses data/aboutus.json and provides all About-Us specific functions,
-tools, and search snippets for the MCP server.
+governance structures, academic programs, MoUs, and search snippets.
 """
-import json
-import os
-from pathlib import Path
+from __future__ import annotations
 
-ROOT = Path(__file__).resolve().parent
-if not (ROOT / "data" / "aboutus.json").is_file():
-    ROOT = Path.cwd()
+from typing import Any, Generator
 
-ABOUT_FILE = ROOT / "data" / "aboutus.json"
-ABOUT_DATA = json.loads(ABOUT_FILE.read_text(encoding="utf-8")) if ABOUT_FILE.is_file() else {}
+from common import DATA_DIR, load_json, reply
 
-PAGES: dict[str, dict] = {
+ABOUT_DATA: dict[str, Any] = load_json(DATA_DIR / "aboutus.json", default={})
+
+PAGES: dict[str, dict[str, Any]] = {
     p["page_metadata"]["slug"]: p
     for p in ABOUT_DATA.get("pages", [])
-    if "page_metadata" in p and "slug" in p["page_metadata"]
+    if isinstance(p, dict) and "page_metadata" in p and "slug" in p["page_metadata"]
 }
 
 
-def base_url() -> str:
-    explicit = os.getenv("BASE_URL") or os.getenv("RENDER_EXTERNAL_URL")
-    if explicit:
-        return explicit.rstrip("/")
-    vercel_url = os.getenv("VERCEL_URL")
-    if vercel_url:
-        return f"https://{vercel_url}".rstrip("/")
-    return "http://localhost:8000"
-
-
-def reply(data: dict, section: str = "", download_url: str | None = None, official_url: str | None = None) -> dict:
-    """Every tool answers in this shape: data + download_url + source (+ optional official_source)."""
-    res = {
-        "data": data,
-        "download_url": download_url,
-        "source": f"{base_url()}/#{section}" if section else base_url(),
-    }
-    if official_url:
-        res["official_source"] = official_url
-    return res
-
-
-def get_about_details() -> dict:
-    """Institution info details from the About Us overview page."""
+def get_about_details() -> dict[str, Any]:
+    """Returns the institution overview details from the About page."""
     return PAGES.get("about", {}).get("institution_info", {})
 
 
-def get_director_details() -> dict:
-    """Detailed profile, qualification, and vision message from Director's desk."""
+def get_director_details() -> dict[str, Any]:
+    """Returns detailed profile, qualification, and vision message from the Director's desk."""
     return PAGES.get("directors-desk", {}).get("director", {})
 
 
-def get_vision_and_mission() -> dict:
+def get_vision_and_mission() -> dict[str, Any]:
     """Vision and mission statements guiding IIIT Sonepat in scientific education, research, and national leadership."""
     vm = PAGES.get("vision-and-mission", {})
     data = {
@@ -63,20 +38,20 @@ def get_vision_and_mission() -> dict:
     return reply(data, "vision", official_url=vm.get("page_metadata", {}).get("url"))
 
 
-def get_courses() -> dict:
+def get_courses() -> dict[str, Any]:
     """Undergraduate programs offered at IIIT Sonepat (B.Tech in CSE, IT, Data Science & Analytics, AI)."""
     abt = PAGES.get("about", {})
     courses = abt.get("courses_offered", [])
     return reply({"courses": courses}, "courses", official_url=abt.get("page_metadata", {}).get("url"))
 
 
-def get_visitor() -> dict:
+def get_visitor() -> dict[str, Any]:
     """Details of the Visitor of IIIT Sonepat (Her Excellency Honorable Smt. Droupadi Murmu, The President of India)."""
     vis = PAGES.get("visitor", {}).get("visitor", {})
     return reply(vis, "visitor", official_url=PAGES.get("visitor", {}).get("page_metadata", {}).get("url"))
 
 
-def get_governance(body: str | None = None) -> dict:
+def get_governance(body: str | None = None) -> dict[str, Any]:
     """Statutory governing bodies of IIIT Sonepat: 'bog' (Board of Governors), 'senate', 'finance', 'building', or all bodies."""
     bodies = {
         "board_of_governors": PAGES.get("board-of-governors", {}).get("members", []),
@@ -85,7 +60,7 @@ def get_governance(body: str | None = None) -> dict:
         "building_works_committee": PAGES.get("building-works-committee", {}).get("members", []),
     }
     if body:
-        b = body.lower()
+        b = body.lower().strip()
         if "bog" in b or "board" in b:
             page = PAGES.get("board-of-governors", {})
             return reply(
@@ -117,12 +92,12 @@ def get_governance(body: str | None = None) -> dict:
     return reply(bodies, "governance", official_url=PAGES.get("board-of-governors", {}).get("page_metadata", {}).get("url"))
 
 
-def get_administration_committees(role: str | None = None) -> dict:
-    """Institute committees for 2025-26 (Admissions, Placements, R&D, Academics, Examination, Digital Outreach, etc.) and faculty-in-charge."""
+def get_administration_committees(role: str | None = None) -> dict[str, Any]:
+    """Institute committees for 2025-26 (Admissions, Placement / Alumni, R&D, Academics, Examination, Digital Outreach, etc.) and faculty-in-charge."""
     ic = PAGES.get("institute-committee", {})
     committees = ic.get("committees", [])
     if role:
-        r = role.lower()
+        r = role.lower().strip()
         committees = [
             c for c in committees
             if r in c.get("committee_or_role", "").lower() or r in c.get("faculty_in_charge", "").lower()
@@ -133,12 +108,12 @@ def get_administration_committees(role: str | None = None) -> dict:
     }, "committees", official_url=ic.get("page_metadata", {}).get("url"))
 
 
-def get_mous(partner: str | None = None) -> dict:
+def get_mous(partner: str | None = None) -> dict[str, Any]:
     """Memorandums of Understanding (MoUs) and partnerships (SVNIT Surat, IIT Bhilai, MNIT Jaipur, IIT Hyderabad, NIT Delhi, NYUST Taiwan, DTU)."""
     abt = PAGES.get("about", {})
     mous = abt.get("memorandum_of_understandings", [])
     if partner:
-        p = partner.lower()
+        p = partner.lower().strip()
         mous = [
             m for m in mous
             if p in m.get("partner_institution", "").lower() or p in m.get("full_partner_name", "").lower()
@@ -146,7 +121,7 @@ def get_mous(partner: str | None = None) -> dict:
     return reply({"mous": mous}, "mous", official_url=abt.get("page_metadata", {}).get("url"))
 
 
-def get_rti_info() -> dict:
+def get_rti_info() -> dict[str, Any]:
     """Right to Information (RTI) officials (Appellate Authority Dr. Diddi Kumara Swamy, PIO Dr. Mohan Bansal), emails, and disclosure audit documents."""
     rti = PAGES.get("right-to-information", {})
     return reply({
@@ -156,7 +131,7 @@ def get_rti_info() -> dict:
     }, "rti", official_url=rti.get("page_metadata", {}).get("url"))
 
 
-def get_policies_and_acts() -> dict:
+def get_policies_and_acts() -> dict[str, Any]:
     """Reservation policies (SC, ST, OBC-NCL, EWS, PwBD) and statutory Acts/Statutes (IIIT PPP Act 2017, POSH 2013, RPN 2016, 4-tier faculty structure)."""
     res = PAGES.get("reservation-policy", {})
     acts = PAGES.get("act-statutes", {})
@@ -172,7 +147,7 @@ def get_policies_and_acts() -> dict:
     }, "policies", official_url=res.get("page_metadata", {}).get("url"))
 
 
-def get_annual_reports() -> dict:
+def get_annual_reports() -> dict[str, Any]:
     """List of published Annual Reports of IIIT Sonepat with academic years and release dates."""
     ar = PAGES.get("annual-reports", {})
     return reply({
@@ -181,8 +156,8 @@ def get_annual_reports() -> dict:
     }, "annual-reports", official_url=ar.get("page_metadata", {}).get("url"))
 
 
-def about_snippets():
-    """Yields all text snippets from About Us pages for keyword search."""
+def about_snippets() -> Generator[tuple[str, str], None, None]:
+    """Yields all text snippets from About Us pages for keyword search indexing."""
     abt = PAGES.get("about", {})
     inst = abt.get("institution_info", {})
     for para in inst.get("overview", []):

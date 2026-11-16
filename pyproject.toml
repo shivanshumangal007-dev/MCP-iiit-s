@@ -1,0 +1,13 @@
+[project]
+name = "mcp-iiit-s"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "mangum>=0.22,<1",
+    "mcp>=1.27,<2",
+    "pytest>=9.2.0",
+    "starlette>=0.36",
+    "uvicorn>=0.30",
+]

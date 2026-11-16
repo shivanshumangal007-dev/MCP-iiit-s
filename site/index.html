@@ -3,35 +3,47 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>IIIT Sonepat MCP</title>
+<title>IIIT Sonepat MCP Server</title>
 <style>
-:root{--ink:#111827;--paper:#f3f5f9;--line:#d8dde7;--accent:#b4531f;--muted:#5b6475}
+:root{--ink:#111827;--paper:#f8fafc;--card:#ffffff;--line:#e2e8f0;--accent:#c2410c;--accent-light:#ffedd5;--muted:#64748b;--primary:#1e293b}
 *{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}
-main,footer .in{max-width:860px;margin:0 auto;padding:0 20px}
-h1,h2,h3{font-family:"Iowan Old Style",Georgia,serif;line-height:1.2}
-h1{font-size:clamp(1.9rem,5vw,2.8rem);margin:0 0 .4rem}
-h2{font-size:1.4rem;margin:0 0 .6rem}
-h3{font-size:1.15rem;margin:1rem 0 .3rem;color:var(--ink)}
-section{padding:28px 0;border-top:1px solid var(--line)}
-header{padding:44px 0 28px;display:flex;gap:20px;align-items:center}
-#logo{width:84px;height:84px;object-fit:contain;background:#fff;border:1px solid var(--line);padding:6px;display:none}
-.sub{color:var(--muted);margin:0}
-.endpoint{display:flex;gap:8px;margin:14px 0;flex-wrap:wrap}
-.endpoint code{flex:1;min-width:240px;background:var(--ink);color:#fff;padding:12px 14px;border-radius:6px;font-size:.95rem;overflow-x:auto;white-space:nowrap}
-button{background:var(--accent);color:#fff;border:0;border-radius:6px;padding:0 18px;font:inherit;font-weight:600;cursor:pointer;min-height:44px}
-button:focus-visible,a:focus-visible{outline:3px solid #f59e0b;outline-offset:2px}
-pre{background:#fff;border:1px solid var(--line);padding:12px;overflow-x:auto;font-size:.85rem}
-a{color:var(--accent)}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main,footer .in{max-width:920px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:"Iowan Old Style",Georgia,serif;line-height:1.2;color:var(--primary)}
+h1{font-size:clamp(2rem,5vw,2.9rem);margin:0 0 .4rem}
+h2{font-size:1.5rem;margin:0 0 .8rem}
+h3{font-size:1.15rem;margin:1.1rem 0 .4rem}
+section{padding:32px 0;border-top:1px solid var(--line)}
+header{padding:48px 0 32px;display:flex;gap:24px;align-items:center}
+#logo{width:88px;height:88px;object-fit:contain;background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px;display:none;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+.sub{color:var(--muted);margin:0;font-weight:500}
+.endpoint{display:flex;gap:10px;margin:16px 0;flex-wrap:wrap}
+.endpoint code{flex:1;min-width:260px;background:var(--primary);color:#f8fafc;padding:12px 16px;border-radius:8px;font-size:.95rem;overflow-x:auto;white-space:nowrap;font-family:ui-monospace,Menlo,monospace}
+button{background:var(--accent);color:#fff;border:0;border-radius:8px;padding:0 20px;font:inherit;font-weight:600;cursor:pointer;min-height:46px;transition:background .15s ease}
+button:hover{background:#9a3412}
+button:focus-visible,a:focus-visible{outline:3px solid #f97316;outline-offset:2px}
+pre{background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px;overflow-x:auto;font-size:.85rem}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
 ul{padding:0;margin:0;list-style:none}
-li{padding:10px 0;border-bottom:1px solid var(--line)}
+li{padding:12px 0;border-bottom:1px solid var(--line)}
 li:last-child{border:0}
 .muted{color:var(--muted)}
-footer{background:var(--ink);color:#cbd2e0;padding:28px 0;margin-top:20px;font-size:.9rem}
-footer a{color:#fff}
-.social{display:flex;gap:14px;flex-wrap:wrap;margin:0 0 12px}
-.social span{opacity:.45}
-.badge{display:inline-block;background:#e5e9f2;color:#334155;padding:2px 8px;border-radius:4px;font-size:.8rem;font-weight:600;margin-right:6px}
+.grid-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:16px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.stat-val{font-size:1.8rem;font-weight:700;color:var(--accent);line-height:1.2}
+.stat-lbl{font-size:.85rem;color:var(--muted);font-weight:500}
+.badge{display:inline-block;background:var(--accent-light);color:var(--accent);padding:3px 10px;border-radius:6px;font-size:.8rem;font-weight:700;margin-right:8px}
+.tag{display:inline-block;background:#e2e8f0;color:#334155;padding:2px 8px;border-radius:4px;font-size:.78rem;font-weight:500;margin:2px 4px 2px 0}
+.table-wrap{overflow-x:auto;margin:16px 0}
+table{width:100%;border-collapse:collapse;font-size:.9rem;background:#fff;border-radius:8px;overflow:hidden;border:1px solid var(--line)}
+th,td{padding:10px 14px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:#f1f5f9;font-weight:600;color:var(--primary)}
+tr:last-child td{border-bottom:0}
+footer{background:var(--primary);color:#cbd5e1;padding:32px 0;margin-top:28px;font-size:.9rem}
+footer a{color:#f8fafc}
+.social{display:flex;gap:14px;flex-wrap:wrap;margin:0 0 14px}
+.social span{opacity:.4}
 </style>
 </head>
 <body>
@@ -42,21 +54,55 @@ footer a{color:#fff}
   </header>
 
   <section id="connect">
-    <h2>Ask an AI agent about IIIT Sonepat</h2>
-    <p>Add this MCP server to your AI app. Answers come with a source link, and files come with direct download links.</p>
+    <h2>Connect AI Agent via Model Context Protocol (MCP)</h2>
+    <p>Add this stateless MCP server to Claude, Cursor, Windsurf, or any MCP client. Includes structured tools for college info, courses, governance, faculty directory, and search.</p>
     <div class="endpoint"><code id="url">Loading…</code><button id="copy" type="button">Copy URL</button></div>
-    <p class="muted">For Cursor and other config-based clients:</p>
+    <p class="muted">Configuration JSON for Cursor and MCP clients:</p>
     <pre id="cfg"></pre>
+    <h3>Available MCP Tools</h3>
     <ul id="tools"></ul>
   </section>
 
-  <section id="about"><h2>About</h2><div id="aboutText"></div></section>
-  <section id="vision"><h2>Vision & Mission</h2><div id="visionBox"></div></section>
-  <section id="courses"><h2>Academic Programs</h2><ul id="courseList"></ul></section>
-  <section id="mous"><h2>MoUs & Collaborations</h2><ul id="mouList"></ul></section>
-  <section id="director"><h2>Director</h2><div id="dirBox"></div></section>
-  <section id="files"><h2>Files</h2><ul id="fileList"></ul></section>
-  <section id="contact"><h2>Contact</h2><div id="contactBox"></div></section>
+  <section id="courses">
+    <h2>Academic Programs</h2>
+    <ul id="courseList"></ul>
+  </section>
+
+  <section id="about">
+    <h2>About IIIT Sonepat</h2>
+    <div id="aboutText"></div>
+  </section>
+
+  <section id="vision">
+    <h2>Vision & Mission</h2>
+    <div id="visionBox"></div>
+  </section>
+
+  <section id="mous">
+    <h2>Strategic MoUs & Collaborations</h2>
+    <ul id="mouList"></ul>
+  </section>
+
+  <section id="faculty">
+    <h2>Faculty Directory</h2>
+    <p class="muted">Faculty members across Computer Science & Engineering, Electronics & Communication Engineering, Mathematics, and Humanities.</p>
+    <div id="facultyList"></div>
+  </section>
+
+  <section id="director">
+    <h2>Director's Desk</h2>
+    <div id="dirBox"></div>
+  </section>
+
+  <section id="files">
+    <h2>Downloadable Assets</h2>
+    <ul id="fileList"></ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact & Campus</h2>
+    <div id="contactBox"></div>
+  </section>
 </main>
 <footer><div class="in">
   <div class="social" id="social"></div>
@@ -65,28 +111,20 @@ footer a{color:#fff}
 <script>
 const $=s=>document.querySelector(s);
 const add=(p,t,props={},txt="")=>{const n=document.createElement(t);Object.assign(n,props);if(txt)n.textContent=txt;p.append(n);return n};
+
 fetch('/api/info').then(r=>r.json()).then(d=>{
   $('#name').textContent=d.name; $('#est').textContent='Established '+d.established;
   $('#url').textContent=d.mcp_url;
   $('#cfg').textContent=JSON.stringify({mcpServers:{'iiit-sonepat':{url:d.mcp_url}}},null,2);
-  $('#copy').onclick=()=>navigator.clipboard.writeText(d.mcp_url).then(()=>{$('#copy').textContent='Copied'});
-  
+  $('#copy').onclick=()=>navigator.clipboard.writeText(d.mcp_url).then(()=>{$('#copy').textContent='Copied!'});
+
   // Tools
-  d.tools.forEach(t=>{const li=add($('#tools'),'li');add(li,'strong',{},t.name);add(li,'span',{className:'muted'},' – '+t.description.split('\n')[0])});
-  
-  // About
-  d.about.forEach(p=>add($('#aboutText'),'p',{},p));
-  
-  // Vision & Mission
-  if(d.vision&&d.vision.length){
-    const vb=$('#visionBox');
-    add(vb,'h3',{},'Vision');
-    d.vision.forEach(v=>add(vb,'p',{},v));
-    add(vb,'h3',{},'Mission');
-    const mul=add(vb,'ul');
-    d.mission.forEach(m=>add(mul,'li',{},m));
-  }
-  
+  d.tools.forEach(t=>{
+    const li=add($('#tools'),'li');
+    add(li,'strong',{},t.name);
+    add(li,'span',{className:'muted'},' – '+t.description.split('\n')[0]);
+  });
+
   // Academic Programs
   if(d.courses&&d.courses.length){
     const cl=$('#courseList');
@@ -96,6 +134,19 @@ fetch('/api/info').then(r=>r.json()).then(d=>{
       add(li,'strong',{},c.title);
       add(li,'div',{className:'muted'},c.description);
     });
+  }
+
+  // About
+  d.about.forEach(p=>add($('#aboutText'),'p',{},p));
+
+  // Vision & Mission
+  if(d.vision&&d.vision.length){
+    const vb=$('#visionBox');
+    add(vb,'h3',{},'Vision');
+    d.vision.forEach(v=>add(vb,'p',{},v));
+    add(vb,'h3',{},'Mission');
+    const mul=add(vb,'ul');
+    d.mission.forEach(m=>add(mul,'li',{},m));
   }
 
   // MoUs
@@ -109,21 +160,40 @@ fetch('/api/info').then(r=>r.json()).then(d=>{
     });
   }
 
+  // Faculty Directory summary
+  const fBox = $('#facultyList');
+  const depts = [
+    { name: "Computer Science & Engineering", count: "12 Faculty members" },
+    { name: "Electronics & Communication Engineering", count: "2 Faculty members" },
+    { name: "Mathematics", count: "2 Faculty members" },
+    { name: "Humanities", count: "1 Faculty member" }
+  ];
+  const dGrid = add(fBox, 'div', {className:'grid-stats'});
+  depts.forEach(dp=>{
+    const c = add(dGrid, 'div', {className:'card'});
+    add(c, 'div', {style:"font-weight:700;color:var(--primary)"}, dp.name);
+    add(c, 'div', {className:'stat-lbl'}, dp.count);
+  });
+  add(fBox, 'p', {className:'muted'}, 'Use the `get_faculty` and `search_faculty` tools to inspect bios, research areas, and contact emails.');
+
   // Director
   const db=$('#dirBox');
   const dinfo=d.director_full||d.director;
-  add(db,'p',{},dinfo.name+(dinfo.designation?' ('+dinfo.designation+')':''));
+  add(db,'p',{style:"font-size:1.1rem;font-weight:700"},dinfo.name+(dinfo.designation?' – '+dinfo.designation:''));
   if(dinfo.qualification) add(db,'p',{className:'muted'},'Qualification: '+dinfo.qualification);
   if(dinfo.email) add(db,'p',{className:'muted'},'Email: '+dinfo.email);
   if(dinfo.about) add(db,'p',{},dinfo.about);
 
   // Files
-  d.files.forEach(f=>{const li=add($('#fileList'),'li');add(li,'strong',{},f.title+' ');
+  d.files.forEach(f=>{
+    const li=add($('#fileList'),'li');
+    add(li,'strong',{},f.title+' ');
     if(f.available){add(li,'a',{href:f.download_url},'Download')}else{add(li,'span',{className:'muted'},'Not uploaded yet')}
-    add(li,'div',{className:'muted'},f.description)});
+    add(li,'div',{className:'muted'},f.description);
+  });
   const logo=d.files.find(f=>f.category==='logo'&&f.available);
   if(logo){$('#logo').src=logo.download_url;$('#logo').style.display='block'}
-  
+
   // Contact
   const c=d.contact,b=$('#contactBox');
   add(b,'p',{},c.address);

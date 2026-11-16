@@ -5,7 +5,7 @@
   ],
   "functions": {
     "api/mcp.py": {
-      "includeFiles": "{about_us.py,data/**,files/**,site/**}"
+      "includeFiles": "{common.py,about_us.py,faculty.py,data/**,files/**,site/**}"
     }
   }
 }
