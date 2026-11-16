@@ -29,6 +29,7 @@ if not (ROOT / "data" / "college.json").is_file():
 
 FILES_DIR = (ROOT / "files").resolve()
 C = json.loads((ROOT / "data" / "college.json").read_text(encoding="utf-8"))
+FACULTY = json.loads((ROOT / "data" / "faculty.json").read_text(encoding="utf-8"))
 
 
 def base_url() -> str:
@@ -68,6 +69,10 @@ def snippets():
     yield "about", "Official website sections: " + ", ".join(C["official_website_sections"]) + f" at {C['official_website']}"
     for f in C["files"]:
         yield "files", f"{f['title']}: {f['description']}"
+
+    # Faculty
+    for f in FACULTY:
+        yield "faculty", f"{f['name']} — {f.get('designation', '')}, {f.get('department', '')} ({', '.join(f.get('expertise', []))})"
 
 
 @mcp.tool()
@@ -109,6 +114,71 @@ def get_logo() -> dict:
     if not ready:
         return reply({"message": "Logo not uploaded yet.", "official_website": C["official_website"]}, "files")
     return reply({"logos": ready}, "files", ready[0]["download_url"])
+
+
+def _clean_email(email: str) -> str:
+    """Un-obfuscate emails stored as name[at]domain[dot]ac[dot]in."""
+    return (email.replace("[at]", "@").replace("[dot]", ".") if email else "")
+
+
+def _faculty_public(f: dict) -> dict:
+    """Return a client-safe subset of a faculty record."""
+    return {
+        "id": f.get("id"),
+        "name": f.get("name"),
+        "designation": f.get("designation"),
+        "department": f.get("department"),
+        "email": _clean_email(f.get("email", "")),
+        "email_raw": f.get("email"),
+        "expertise": f.get("expertise", []),
+        "linkedin": f.get("linkedin"),
+        "image": f.get("image"),
+        "order": f.get("order"),
+    }
+
+
+def _faculty_index() -> dict[str, list[dict]]:
+    """Index faculty by lowercase name for partial/name lookups."""
+    index: dict[str, list[dict]] = {}
+    for f in FACULTY:
+        index.setdefault(f.get("name", "").lower(), []).append(f)
+    return index
+
+
+@mcp.tool()
+def list_faculty(department: str | None = None) -> dict:
+    """List faculty members. Optional department filter, e.g. 'Computer Science and Engineering'."""
+    items = [
+        _faculty_public(f)
+        for f in FACULTY
+        if not department or f.get("department") == department
+    ]
+    items.sort(key=lambda f: (f.get("order") is None, f.get("order") or 9999, f["name"] or ""))
+    return reply({"faculty": items, "count": len(items)}, "faculty")
+
+
+@mcp.tool()
+def get_faculty_by_id(faculty_id: str) -> dict:
+    """Get a faculty member by their unique ID (e.g. '684e743d023bf6b8a62d7cdc')."""
+    for f in FACULTY:
+        if f.get("id") == faculty_id or f.get("_id") == faculty_id:
+            return reply(_faculty_public(f), "faculty")
+    return reply({"faculty_id": faculty_id, "message": "Faculty member not found."}, "faculty")
+
+
+@mcp.tool()
+def get_faculty_by_name(name: str) -> dict:
+    """Find faculty by full or partial name (case-insensitive). Returns all matches."""
+    key = name.lower().strip()
+    index = _faculty_index()
+    matches: list[dict] = []
+    for k, members in index.items():
+        if key in k:
+            matches.extend(_faculty_public(m) for m in members)
+    matches.sort(key=lambda f: (f.get("order") is None, f.get("order") or 9999, f["name"] or ""))
+    if not matches:
+        return reply({"query": name, "matches": [], "message": "No faculty member found with that name."}, "faculty")
+    return reply({"query": name, "matches": matches, "count": len(matches)}, "faculty")
 
 
 @mcp.tool()

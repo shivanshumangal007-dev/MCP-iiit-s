@@ -18,6 +18,9 @@ Every tool returns `data`, `download_url` (for files), `source` (a section link 
 - `get_contact`: Address, phone numbers, email, and social media handles.
 - `list_files`: Downloadable files (logos, documents).
 - `get_logo`: Direct download link for the official IIIT Sonepat logo.
+- `list_faculty`: List all faculty members (from `data/faculty.json`). Optional `department` filter.
+- `get_faculty_by_id`: Look up a faculty member by their unique ID.
+- `get_faculty_by_name`: Find faculty by full or partial name (case-insensitive).
 - `search_info`: Comprehensive keyword search across all institute data.
 
 ## Run locally
@@ -32,6 +35,7 @@ Test with `npx @modelcontextprotocol/inspector` (choose Streamable HTTP, paste t
 
 ## Data Sources
 - `data/college.json`: Core institute metadata, contact, social channels, and file manifests.
+- `data/faculty.json`: Faculty directory (17 members) — names, designations, departments, emails, expertise, LinkedIn profiles, and photos. **Source of truth for faculty tools.**
 - `data/aboutus.json`: Comprehensive "About Us" data compiled directly from iiitsonepat.ac.in covering vision, mission, academic programs, MoUs, governance, institute committees, RTI, reservation policies, acts, and annual reports.
 
 ## Deploy on Vercel (serverless)
